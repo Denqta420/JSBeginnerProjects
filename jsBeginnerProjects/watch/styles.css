@@ -1,0 +1,10 @@
+body {
+    background: black;
+}
+
+#watch {
+    color: #3283a8;
+    font-size: 150px;
+    margin-top: 300px;
+    margin-left: 600px;
+}

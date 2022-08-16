@@ -1,0 +1,36 @@
+body {
+    background: #fcb103;
+    position: absolute;
+}
+
+#conteiner {
+   margin-top: 150px;
+    margin-left: 550px;
+    align-items: center;
+    
+}
+
+#heading {
+    font-size: 6em;
+}
+
+#timer {
+    margin-left: 230px;
+    font-size: 3em;
+}
+
+#button-conteiner{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.button{
+    border-radius: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
