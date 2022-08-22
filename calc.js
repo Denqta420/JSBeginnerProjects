@@ -37,8 +37,8 @@ for (let i = 0; i < operator.length; i++) {
         let clicked = operator[i].innerHTML
         let lastChar = output.innerHTML.charAt(output.innerHTML.length - 1)
 
-     
-    
+
+
 
         if (!resultDisplayed || isValid(lastChar, clicked)) {
             return
@@ -46,7 +46,7 @@ for (let i = 0; i < operator.length; i++) {
             output.innerHTML += operator[i].innerHTML
             // if (clicked === '+') {
             //     console.log(num, ' number')
-            
+
             //     result += num;
             //     console.log(num, ' number')
             //     num = undefined;
@@ -71,10 +71,12 @@ for (let i = 0; i < operator.length; i++) {
 }
 
 equal.addEventListener('click', () => {
-    let  test = '87+22'
-    results = test.split('+');
+    let outputString = output.innerHTML
+    results = outputString.split(/\+|\-|\*|\//g);
     console.log(results)
 
+  outputString.split(results)
+console.log()
 
 })
 
