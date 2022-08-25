@@ -6,40 +6,67 @@ let colorHolders = document.getElementsByClassName('color-holder')
 
 
 
-const randomBetween = (min, max) =>  min + Math.floor(Math.random() * (max - min + 1));
+const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
 
 
 
 colorReset.addEventListener('click', () => {
+    let rightHolder
     let color = random_rgb();
-    const rightHolder = randomBetween(0, 5);
+
+    if (easy.style.color === 'rgb(255, 255, 255)') {
+        rightHolder = randomBetween(0, 2);
+        for (let i = 0; i < 3; i++) {
+
+            colorHolders[i].style.zIndex = 1;
+
+        }
+    } else {
+        rightHolder = randomBetween(0, 5);
+        for (let i = 0; i < 6; i++) {
+
+            colorHolders[i].style.zIndex = 1;
+
+        }
+
+    }
+
+
+
+
+    if (easy.style.color === 'rgb(255, 255, 255)') {
+        rightHolder = randomBetween(0, 2);
+    } else {
+        rightHolder = randomBetween(0, 5);
+    }
+
     head.innerHTML = `<h1 f="">THE GREAT<br>${color}<br>Guessing GAME</h1>`
-    
-    for (let i = 0; i < colorHolders.length; i++) { 
-        if( i === rightHolder){
+
+    for (let i = 0; i < colorHolders.length; i++) {
+        if (i === rightHolder) {
             colorHolders[i].style.backgroundColor = color;
             console.log('mamkamu')
-        } else{
+        } else {
             colorHolders[i].style.backgroundColor = random_rgb();
             console.log('otitaka')
         }
-     
+
     };
 
-
-    colorHolders(rightHolder).style.backgroundColor =  color
 
     for (let i = 0; i < colorHolders.length; i++) {
         colorHolders[i].addEventListener('click', () => {
 
-            if (color === colorHolders[i].style.backgroundColor) {
+
+
+            if (color.replaceAll(' ', '') == colorHolders[i].style.backgroundColor.replaceAll(' ', '')) {
                 alert('You win')
             } else {
                 colorHolders[i].style.zIndex = -1;
             }
 
         })
-        }
+    }
 
 
 
@@ -49,8 +76,8 @@ colorReset.addEventListener('click', () => {
 
 for (let i = 0; i < colorHolders.length; i++) {
     colorHolders[i].addEventListener('click', () => {
-     let color = head.innerText.split(' ')
-        
+        let color = head.innerText.split(' ')
+
 
         if (color[1] === colorHolders[i].style.backgroundColor) {
             alert('You win')
@@ -59,7 +86,7 @@ for (let i = 0; i < colorHolders.length; i++) {
         }
 
     })
-    }
+}
 
 easy.addEventListener('click', () => {
 
