@@ -6,6 +6,7 @@ body {
 .calculator {
     border: 2px solid #ddd;
     border-radius: 10px;
+    box-shadow: 20px 30px #888888;;
     width: 380px;
     height: 500px;
     margin-left: 750px;

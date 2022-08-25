@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Aboreto">
 </head>
+
 <body>
-    
+    <div class="head" id="head">
+        <h1 f>THE GREAT<br />RGB<br />Guessing GAME</h1>
+    </div>
+    <div class="navbar">
+        <div class="newcolors">
+            <button class="button" id="new-colors">NEW COLORS</button>
+        </div>
+        <div class="gamemode">
+            <button class="button" id="easy">EASY</button>
+            <button class="button" id="hard">HARD</button>
+        </div>
+    </div>
+    <div class="gamefield">
+        <div class="row">
+            <div class="color-holder"></div>
+            <div class="color-holder"></div>
+            <div class="color-holder"></div>
+        </div>
+        <div class="row">
+            <div class="color-holder" id="first"></div>
+            <div class="color-holder" id="second"></div>
+            <div class="color-holder" id="third"></div>
+        </div>
+    </div>
+<script src="ColorGame.js"></script>
 </body>
+
 </html>
